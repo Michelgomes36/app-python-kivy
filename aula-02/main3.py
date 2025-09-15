@@ -1,9 +1,11 @@
+# Importa os componentes principais do Kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 
+# Define a classe principal da aplicação
 class LoginApp(App):
     def build(self):
         self.layout = BoxLayout(orientation='vertical', padding=20, spacing=10)
@@ -22,10 +24,12 @@ class LoginApp(App):
 
         return self.layout
 
+# Função chamada ao clicar no botão "Entrar"
     def validar_login(self, instance):
         if self.usuario.text == 'admin' and self.senha.text == '123':
             self.resultado.text = 'Login bem-sucedido!'
         else:
             self.resultado.text = 'Usuário ou senha incorretos.'
 
+# Executa a aplicação
 LoginApp().run()
