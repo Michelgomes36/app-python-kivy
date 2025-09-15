@@ -1,3 +1,5 @@
+#Esse código cria uma interface simples com dois campos: usuário e senha, usando GridLayout do Kivy
+
 # Importa a classe base da aplicação Kivy
 from kivy.app import App
 # Importa o layout em grade (GridLayout)
