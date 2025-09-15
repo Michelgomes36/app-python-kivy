@@ -1,3 +1,5 @@
+#Esse código cria uma interface simples com três botões usando o Kivy.
+
 # Importa a classe base da aplicação Kivy
 from kivy.app import App
 # Importa o botão e o layout em caixa (BoxLayout)
