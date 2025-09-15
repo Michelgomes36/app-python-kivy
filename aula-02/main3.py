@@ -1,3 +1,5 @@
+#Esse código cria uma interface de login funcional com Kivy, usando apenas Python, sem o arquivo KV.
+
 # Importa os componentes principais do Kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
