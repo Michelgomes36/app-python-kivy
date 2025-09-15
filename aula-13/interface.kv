@@ -1,0 +1,100 @@
+ScreenManager:
+    TelaLogin:
+    TelaCadastro:
+    TelaPrincipal:
+
+<TelaLogin>:
+    name: 'login'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: 'Login'
+            font_size: 24
+
+        TextInput:
+            id: usuario
+            hint_text: 'Usuário'
+            multiline: False
+
+        TextInput:
+            id: senha
+            hint_text: 'Senha'
+            password: True
+            multiline: False
+
+        Button:
+            text: 'Entrar'
+            on_press: root.validar()
+
+        Button:
+            text: 'Cadastrar'
+            on_press: app.root.current = 'cadastro'
+
+<TelaCadastro>:
+    name: 'cadastro'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: 'Cadastro'
+            font_size: 24
+
+        TextInput:
+            id: novo_usuario
+            hint_text: 'Novo usuário'
+            multiline: False
+
+        TextInput:
+            id: nova_senha
+            hint_text: 'Nova senha'
+            password: True
+            multiline: False
+
+        Button:
+            text: 'Salvar'
+            on_press: root.salvar()
+
+        Button:
+            text: 'Voltar'
+            on_press: app.root.current = 'login'
+
+<TelaPrincipal>:
+    name: 'principal'
+    BoxLayout:
+        orientation: 'horizontal'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.3
+            spacing: 10
+            padding: 10
+            canvas.before:
+                Color:
+                    rgba: 0.2, 0.2, 0.2, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                text: '🏠 Início'
+                on_press: print('Início')
+
+            Button:
+                text: '📁 Arquivos'
+                on_press: print('Arquivos')
+
+            Button:
+                text: '🔒 Sair'
+                on_press: app.root.current = 'login'
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 20
+            Label:
+                text: 'Conteúdo Principal'
+                font_size: 24

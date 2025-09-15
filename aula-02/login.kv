@@ -1,0 +1,26 @@
+<LoginLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: "Digite seu usuário e senha"
+
+    TextInput:
+        id: usuario
+        hint_text: 'Usuário'
+        multiline: False
+
+    TextInput:
+        id: senha
+        hint_text: 'Senha'
+        password: True
+        multiline: False
+
+    Button:
+        text: 'Entrar'
+        on_press: root.validar_login()
+
+    Label:
+        id: resultado
+        text: ''

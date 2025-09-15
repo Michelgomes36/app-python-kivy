@@ -1,0 +1,45 @@
+ScreenManager:
+    TelaLogin:
+    TelaBoasVindas:
+
+<TelaLogin>:
+    name: 'login'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 20
+
+        TextInput:
+            id: usuario
+            hint_text: 'Usuário'
+            multiline: False
+
+        TextInput:
+            id: senha
+            hint_text: 'Senha'
+            password: True
+            multiline: False
+
+        Button:
+            text: 'Entrar'
+            on_press:
+                root.validar_login()
+
+
+        Label:
+            id: resultado
+            text: ''
+
+<TelaBoasVindas>:
+    name: 'boas_vindas'
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 20
+
+        Label:
+            text: 'Bem-vindo!'
+        Button:
+            text: 'Voltar'
+            on_press:
+                app.root.current = 'login'

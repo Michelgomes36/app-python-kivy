@@ -1,0 +1,24 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    Label:
+        id: status
+        text: 'Digite um nome'
+        font_size: 24
+
+    TextInput:
+        id: nome_input
+        multiline: False
+        font_size: 20
+
+    Button:
+        text: 'Salvar nome'
+        font_size: 20
+        on_press: app.salvar_nome()
+
+    Button:
+        text: 'Mostrar nomes salvos'
+        font_size: 20
+        on_press: app.mostrar_nomes()
