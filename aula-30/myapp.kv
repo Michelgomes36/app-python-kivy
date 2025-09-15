@@ -1,7 +1,9 @@
+#define o gerenciador de telas e as telas que ele vai controlar
 ScreenManager:
     TelaLogin:
     TelaBoasVindas:
 
+#Tela inicial de login define pelo nome 'login'
 <TelaLogin>:
     name: 'login'
     BoxLayout:
@@ -25,11 +27,12 @@ ScreenManager:
             on_press:
                 root.validar_login()
 
-
         Label:
             id: resultado
             text: ''
 
+
+#Tela principal definado pelo nome 'boas_vindas'
 <TelaBoasVindas>:
     name: 'boas_vindas'
     BoxLayout:

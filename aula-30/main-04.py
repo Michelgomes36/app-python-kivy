@@ -1,3 +1,4 @@
+# Importa os componentes principais do Kivy
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
@@ -45,7 +46,7 @@ class TelaBoasVindas(Screen):
     def voltar(self, instance):
         self.manager.current = 'login'
 
-# App principal
+# App principal, metodo build
 class MeuApp(App):
     def build(self):
         sm = ScreenManager()
@@ -53,5 +54,6 @@ class MeuApp(App):
         sm.add_widget(TelaBoasVindas(name='boas_vindas'))
         return sm
 
+#inicia essa aplicação
 if __name__ == '__main__':
     MeuApp().run()
