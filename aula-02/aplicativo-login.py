@@ -1,3 +1,5 @@
+#Código que cria uma tela de login funcional usando Kivy com separação entre lógica (Python) e interface (KV). 
+
 # Importa os componentes principais do Kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
